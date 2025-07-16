@@ -249,7 +249,7 @@ const Hero = ()=>{
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-warm-600 dark:text-warm-400",
+                                    className: "text-gray-600 dark:text-gray-400",
                                     children: "Bheempalli"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Hero.tsx",
@@ -272,7 +272,7 @@ const Hero = ()=>{
                         className: "mb-8",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-xl md:text-2xl text-warm-600 dark:text-warm-400 font-heading leading-relaxed",
+                                className: "text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-heading leading-relaxed",
                                 children: "Passionate JavaScript Developer & Tech Enthusiast"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Hero.tsx",
@@ -280,11 +280,11 @@ const Hero = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-lg text-warm-500 dark:text-warm-500 mt-4 max-w-2xl mx-auto font-sf-pro",
+                                className: "text-lg text-gray-500 dark:text-gray-500 mt-4 max-w-2xl mx-auto font-sf-pro",
                                 children: [
                                     "Crafting digital experiences with modern technologies. Specializing in",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-warm-700 dark:text-warm-300 font-medium",
+                                        className: "text-gray-700 dark:text-gray-300 font-medium",
                                         children: " DevOps, Cloud Computing, Cybersecurity, "
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Hero.tsx",
@@ -319,7 +319,7 @@ const Hero = ()=>{
                                         whileTap: {
                                             scale: 0.95
                                         },
-                                        className: "bg-warm-800 dark:bg-warm-200 text-white dark:text-warm-800 px-8 py-3 rounded-full font-medium hover:bg-warm-900 dark:hover:bg-warm-100 transition-colors duration-300 flex items-center space-x-2",
+                                        className: "bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 px-8 py-3 rounded-full font-medium hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors duration-300 flex items-center space-x-2",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
                                                 size: 18
@@ -350,7 +350,7 @@ const Hero = ()=>{
                                         whileTap: {
                                             scale: 0.95
                                         },
-                                        className: "border-2 border-warm-300 dark:border-warm-600 text-warm-700 dark:text-warm-300 px-8 py-3 rounded-full font-medium hover:bg-warm-100 dark:hover:bg-warm-800 transition-colors duration-300 flex items-center space-x-2",
+                                        className: "border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-3 rounded-full font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300 flex items-center space-x-2",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__["Download"], {
                                                 size: 18
@@ -388,7 +388,7 @@ const Hero = ()=>{
                                             scale: 1.2,
                                             rotate: 5
                                         },
-                                        className: "text-warm-600 dark:text-warm-400 hover:text-warm-800 dark:hover:text-warm-200 transition-colors duration-300",
+                                        className: "text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$github$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Github$3e$__["Github"], {
                                             size: 28
                                         }, void 0, false, {
@@ -408,7 +408,7 @@ const Hero = ()=>{
                                             scale: 1.2,
                                             rotate: -5
                                         },
-                                        className: "text-warm-600 dark:text-warm-400 hover:text-warm-800 dark:hover:text-warm-200 transition-colors duration-300",
+                                        className: "text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__["Linkedin"], {
                                             size: 28
                                         }, void 0, false, {
@@ -449,7 +449,7 @@ const Hero = ()=>{
                                 repeat: Infinity,
                                 duration: 2
                             },
-                            className: "text-warm-400 hover:text-warm-600 transition-colors duration-300",
+                            className: "text-gray-400 hover:text-gray-600 transition-colors duration-300",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                 size: 32
                             }, void 0, false, {
@@ -474,7 +474,7 @@ const Hero = ()=>{
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 bg-gradient-to-br from-transparent via-warm-50/20 to-transparent dark:from-transparent dark:via-warm-900/20 dark:to-transparent pointer-events-none"
+                className: "absolute inset-0 bg-gradient-to-br from-transparent via-gray-50/20 to-transparent dark:from-transparent dark:via-gray-900/20 dark:to-transparent pointer-events-none"
             }, void 0, false, {
                 fileName: "[project]/src/components/Hero.tsx",
                 lineNumber: 165,

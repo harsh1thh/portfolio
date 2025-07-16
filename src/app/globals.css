@@ -164,43 +164,43 @@
 
 .smooth-gradient {
   background: linear-gradient(180deg, 
-    rgba(250, 250, 249, 1) 0%,
-    rgba(245, 245, 244, 0.98) 10%,
-    rgba(231, 229, 228, 0.95) 20%,
-    rgba(214, 211, 209, 0.92) 30%,
-    rgba(196, 181, 173, 0.90) 40%,
-    rgba(168, 162, 158, 0.88) 50%,
-    rgba(140, 132, 128, 0.85) 60%,
-    rgba(120, 113, 108, 0.83) 70%,
-    rgba(100, 95, 91, 0.80) 80%,
-    rgba(87, 83, 78, 0.78) 90%,
-    rgba(68, 64, 60, 0.75) 100%
+    rgba(255, 255, 255, 1) 0%,
+    rgba(250, 250, 250, 0.98) 10%,
+    rgba(245, 245, 245, 0.95) 20%,
+    rgba(240, 240, 240, 0.92) 30%,
+    rgba(235, 235, 235, 0.90) 40%,
+    rgba(230, 230, 230, 0.88) 50%,
+    rgba(225, 225, 225, 0.85) 60%,
+    rgba(220, 220, 220, 0.83) 70%,
+    rgba(215, 215, 215, 0.80) 80%,
+    rgba(210, 210, 210, 0.78) 90%,
+    rgba(200, 200, 200, 0.75) 100%
   );
   min-height: 100vh;
 }
 
 .dark .smooth-gradient {
   background: linear-gradient(180deg, 
-    rgba(12, 10, 9, 1) 0%,
-    rgba(17, 12, 10, 0.98) 8%,
-    rgba(23, 20, 18, 0.96) 16%,
-    rgba(28, 25, 23, 0.94) 24%,
-    rgba(34, 30, 28, 0.92) 32%,
-    rgba(41, 37, 36, 0.90) 40%,
-    rgba(48, 44, 42, 0.88) 48%,
-    rgba(54, 52, 51, 0.86) 56%,
-    rgba(62, 58, 57, 0.84) 64%,
-    rgba(68, 64, 60, 0.82) 72%,
-    rgba(75, 71, 69, 0.80) 80%,
-    rgba(82, 78, 76, 0.78) 88%,
-    rgba(87, 83, 78, 0.75) 100%
+    rgba(0, 0, 0, 1) 0%,
+    rgba(5, 5, 5, 0.98) 8%,
+    rgba(8, 8, 8, 0.96) 16%,
+    rgba(12, 12, 12, 0.94) 24%,
+    rgba(15, 15, 15, 0.92) 32%,
+    rgba(18, 18, 18, 0.90) 40%,
+    rgba(20, 20, 20, 0.88) 48%,
+    rgba(22, 22, 22, 0.86) 56%,
+    rgba(25, 25, 25, 0.84) 64%,
+    rgba(28, 28, 28, 0.82) 72%,
+    rgba(30, 30, 30, 0.80) 80%,
+    rgba(32, 32, 32, 0.78) 88%,
+    rgba(35, 35, 35, 0.75) 100%
   );
   background-attachment: fixed;
   min-height: 100vh;
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #44403c, #78716c, #a8a29e);
+  background: linear-gradient(135deg, #374151, #6b7280, #9ca3af);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -210,7 +210,7 @@
 }
 
 .dark .text-gradient {
-  background: linear-gradient(135deg, #f5f5f4, #e7e5e4, #d6d3d1);
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0, #cbd5e1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -293,11 +293,11 @@ body {
 .scroll-progress-bar {
   height: 100%;
   background: linear-gradient(90deg, 
-    #a8a29e 0%, 
-    #78716c 25%, 
-    #57534e 50%, 
-    #44403c 75%, 
-    #292524 100%
+    #9ca3af 0%, 
+    #6b7280 25%, 
+    #4b5563 50%, 
+    #374151 75%, 
+    #1f2937 100%
   );
   width: 0%;
   transition: width 0.1s ease-out;
@@ -309,11 +309,11 @@ body {
 
 .dark .scroll-progress-bar {
   background: linear-gradient(90deg, 
-    #78716c 0%, 
-    #a8a29e 25%, 
-    #d6d3d1 50%, 
-    #e7e5e4 75%, 
-    #f5f5f4 100%
+    #6b7280 0%, 
+    #9ca3af 25%, 
+    #d1d5db 50%, 
+    #e5e7eb 75%, 
+    #f3f4f6 100%
   );
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
 }

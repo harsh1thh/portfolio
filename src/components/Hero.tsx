@@ -87,17 +87,17 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-display text-gradient mb-4 leading-tight">
             Harshith
             <br />
-            <span className="text-warm-600 dark:text-warm-400">Bheempalli</span>
+            <span className="text-gray-600 dark:text-gray-400">Bheempalli</span>
           </h1>
         </motion.div>
 
         <motion.div variants={fadeInUp} className="mb-8">
-          <p className="text-xl md:text-2xl text-warm-600 dark:text-warm-400 font-heading leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-heading leading-relaxed">
             Passionate JavaScript Developer & Tech Enthusiast
           </p>
-          <p className="text-lg text-warm-500 dark:text-warm-500 mt-4 max-w-2xl mx-auto font-sf-pro">
+          <p className="text-lg text-gray-500 dark:text-gray-500 mt-4 max-w-2xl mx-auto font-sf-pro">
             Crafting digital experiences with modern technologies. Specializing in 
-            <span className="text-warm-700 dark:text-warm-300 font-medium"> DevOps, Cloud Computing, Cybersecurity, </span>
+            <span className="text-gray-700 dark:text-gray-300 font-medium"> DevOps, Cloud Computing, Cybersecurity, </span>
             and cutting-edge web development.
           </p>
         </motion.div>
@@ -108,7 +108,7 @@ const Hero = () => {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-warm-800 dark:bg-warm-200 text-white dark:text-warm-800 px-8 py-3 rounded-full font-medium hover:bg-warm-900 dark:hover:bg-warm-100 transition-colors duration-300 flex items-center space-x-2"
+              className="bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 px-8 py-3 rounded-full font-medium hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors duration-300 flex items-center space-x-2"
             >
               <Mail size={18} />
               <span>Get In Touch</span>
@@ -119,7 +119,7 @@ const Hero = () => {
               target="_blank"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-warm-300 dark:border-warm-600 text-warm-700 dark:text-warm-300 px-8 py-3 rounded-full font-medium hover:bg-warm-100 dark:hover:bg-warm-800 transition-colors duration-300 flex items-center space-x-2"
+              className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-3 rounded-full font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300 flex items-center space-x-2"
             >
               <Download size={18} />
               <span>Download CV</span>
@@ -131,7 +131,7 @@ const Hero = () => {
               href="https://github.com/harsh1thX"
               target="_blank"
               whileHover={{ scale: 1.2, rotate: 5 }}
-              className="text-warm-600 dark:text-warm-400 hover:text-warm-800 dark:hover:text-warm-200 transition-colors duration-300"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300"
             >
               <Github size={28} />
             </motion.a>
@@ -139,7 +139,7 @@ const Hero = () => {
               href="https://linkedin.com/in/harshith-bheempalli"
               target="_blank"
               whileHover={{ scale: 1.2, rotate: -5 }}
-              className="text-warm-600 dark:text-warm-400 hover:text-warm-800 dark:hover:text-warm-200 transition-colors duration-300"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300"
             >
               <Linkedin size={28} />
             </motion.a>
@@ -154,7 +154,7 @@ const Hero = () => {
             href="#about"
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="text-warm-400 hover:text-warm-600 transition-colors duration-300"
+            className="text-gray-400 hover:text-gray-600 transition-colors duration-300"
           >
             <ChevronDown size={32} />
           </motion.a>
@@ -162,7 +162,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-warm-50/20 to-transparent dark:from-transparent dark:via-warm-900/20 dark:to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-50/20 to-transparent dark:from-transparent dark:via-gray-900/20 dark:to-transparent pointer-events-none" />
     </section>
   )
 }
