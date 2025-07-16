@@ -1,0 +1,408 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SF Pro Display Font */
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://developer.apple.com/fonts/SF-Pro-Display-Regular.woff2') format('woff2'),
+       url('https://developer.apple.com/fonts/SF-Pro-Display-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://developer.apple.com/fonts/SF-Pro-Display-Medium.woff2') format('woff2'),
+       url('https://developer.apple.com/fonts/SF-Pro-Display-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://developer.apple.com/fonts/SF-Pro-Display-Semibold.woff2') format('woff2'),
+       url('https://developer.apple.com/fonts/SF-Pro-Display-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://developer.apple.com/fonts/SF-Pro-Display-Bold.woff2') format('woff2'),
+       url('https://developer.apple.com/fonts/SF-Pro-Display-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Grandeurs Font */
+@font-face {
+  font-family: 'Grandeurs';
+  src: url('/fonts/Grandeurs.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 30 8% 98%;
+    --foreground: 20 6% 10%;
+    --card: 30 8% 96%;
+    --card-foreground: 20 6% 12%;
+    --popover: 30 8% 98%;
+    --popover-foreground: 20 6% 10%;
+    --primary: 20 6% 20%;
+    --primary-foreground: 30 8% 98%;
+    --secondary: 30 8% 93%;
+    --secondary-foreground: 20 6% 20%;
+    --muted: 30 8% 95%;
+    --muted-foreground: 20 4% 45%;
+    --accent: 30 8% 93%;
+    --accent-foreground: 20 6% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 30 8% 98%;
+    --border: 30 6% 88%;
+    --input: 30 6% 88%;
+    --ring: 20 6% 20%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 20 6% 8%;
+    --foreground: 30 8% 95%;
+    --card: 20 6% 10%;
+    --card-foreground: 30 8% 93%;
+    --popover: 20 6% 8%;
+    --popover-foreground: 30 8% 95%;
+    --primary: 30 8% 85%;
+    --primary-foreground: 20 6% 12%;
+    --secondary: 20 6% 12%;
+    --secondary-foreground: 30 8% 85%;
+    --muted: 20 6% 14%;
+    --muted-foreground: 30 4% 55%;
+    --accent: 20 6% 14%;
+    --accent-foreground: 30 8% 85%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 30 8% 95%;
+    --border: 20 6% 18%;
+    --input: 20 6% 18%;
+    --ring: 30 8% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Font Family Utilities */
+  .font-sf-pro {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  .font-grandeurs {
+    font-family: 'Grandeurs', 'SF Pro Display', -apple-system, BlinkMacSystemFont, serif;
+  }
+  
+  .font-display {
+    font-family: 'Grandeurs', 'SF Pro Display', -apple-system, BlinkMacSystemFont, serif;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+  }
+  
+  .font-heading {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom styles for ultra-premium feel */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, 
+    rgba(120, 113, 108, 0.1) 0%, 
+    rgba(87, 83, 78, 0.05) 50%, 
+    rgba(68, 64, 60, 0.1) 100%);
+}
+
+.dark .premium-gradient {
+  background: linear-gradient(135deg, 
+    rgba(245, 245, 244, 0.1) 0%, 
+    rgba(231, 229, 228, 0.05) 50%, 
+    rgba(214, 211, 209, 0.1) 100%);
+}
+
+.smooth-gradient {
+  background: linear-gradient(180deg, 
+    rgba(250, 250, 249, 1) 0%,
+    rgba(245, 245, 244, 0.98) 10%,
+    rgba(231, 229, 228, 0.95) 20%,
+    rgba(214, 211, 209, 0.92) 30%,
+    rgba(196, 181, 173, 0.90) 40%,
+    rgba(168, 162, 158, 0.88) 50%,
+    rgba(140, 132, 128, 0.85) 60%,
+    rgba(120, 113, 108, 0.83) 70%,
+    rgba(100, 95, 91, 0.80) 80%,
+    rgba(87, 83, 78, 0.78) 90%,
+    rgba(68, 64, 60, 0.75) 100%
+  );
+  min-height: 100vh;
+}
+
+.dark .smooth-gradient {
+  background: linear-gradient(180deg, 
+    rgba(12, 10, 9, 1) 0%,
+    rgba(17, 12, 10, 0.98) 8%,
+    rgba(23, 20, 18, 0.96) 16%,
+    rgba(28, 25, 23, 0.94) 24%,
+    rgba(34, 30, 28, 0.92) 32%,
+    rgba(41, 37, 36, 0.90) 40%,
+    rgba(48, 44, 42, 0.88) 48%,
+    rgba(54, 52, 51, 0.86) 56%,
+    rgba(62, 58, 57, 0.84) 64%,
+    rgba(68, 64, 60, 0.82) 72%,
+    rgba(75, 71, 69, 0.80) 80%,
+    rgba(82, 78, 76, 0.78) 88%,
+    rgba(87, 83, 78, 0.75) 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #44403c, #78716c, #a8a29e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Grandeurs', 'SF Pro Display', -apple-system, BlinkMacSystemFont, serif;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+}
+
+.dark .text-gradient {
+  background: linear-gradient(135deg, #f5f5f4, #e7e5e4, #d6d3d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Grandeurs', 'SF Pro Display', -apple-system, BlinkMacSystemFont, serif;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.dark .hover-lift:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Enhanced smooth scrolling for mobile */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  .smooth-gradient {
+    transition: background 0.3s ease-in-out;
+  }
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.dark .smooth-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 20s ease infinite;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .scroll-progress {
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, 
+    #a8a29e 0%, 
+    #78716c 25%, 
+    #57534e 50%, 
+    #44403c 75%, 
+    #292524 100%
+  );
+  width: 0%;
+  transition: width 0.1s ease-out;
+  border-radius: 2px 0 0 2px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .scroll-progress-bar {
+  background: linear-gradient(90deg, 
+    #78716c 0%, 
+    #a8a29e 25%, 
+    #d6d3d1 50%, 
+    #e7e5e4 75%, 
+    #f5f5f4 100%
+  );
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Shimmering effect */
+.scroll-progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.4) 50%, 
+    transparent 100%
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Cute pulse animation */
+@keyframes progressPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scaleY(1.1);
+  }
+}
+
+.scroll-progress-bar {
+  animation: progressPulse 2s ease-in-out infinite;
+}
+
+/* Sparkle effect when scrolling */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scroll-progress::before {
+  content: '✨';
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-size: 16px;
+  animation: sparkle 1s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 113, 108, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 113, 108, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 244, 0.3);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 245, 244, 0.5);
+}
