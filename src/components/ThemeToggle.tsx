@@ -12,7 +12,7 @@ const ThemeToggle = () => {
       onClick={toggleTheme}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="relative p-2 rounded-full bg-warm-200 dark:bg-warm-800 text-warm-800 dark:text-warm-200 transition-colors duration-300 hover:bg-warm-300 dark:hover:bg-warm-700"
+      className="relative p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 transition-colors duration-300 hover:bg-gray-300 dark:hover:bg-gray-700"
       aria-label="Toggle theme"
     >
       <motion.div

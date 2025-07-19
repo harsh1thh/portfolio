@@ -31,7 +31,7 @@ const Navigation = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled 
-          ? 'bg-white/90 dark:bg-warm-900/90 backdrop-blur-lg border-b border-warm-200/50 dark:border-warm-700/50 shadow-lg' 
+          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg border-b border-gray-200/50 dark:border-gray-700/50 shadow-lg' 
           : 'bg-transparent'
       }`}
     >
@@ -53,7 +53,7 @@ const Navigation = () => {
                   key={item.href}
                   href={item.href}
                   whileHover={{ y: -2 }}
-                  className="flex items-center space-x-2 text-warm-700 dark:text-warm-300 hover:text-warm-900 dark:hover:text-warm-100 transition-colors duration-300 font-medium"
+                  className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 font-medium"
                 >
                   <item.icon size={18} />
                   <span>{item.label}</span>
@@ -68,7 +68,7 @@ const Navigation = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-warm-700 dark:text-warm-300 hover:text-warm-900 dark:hover:text-warm-100 transition-colors"
+              className="p-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -93,7 +93,7 @@ const Navigation = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-3 text-warm-700 dark:text-warm-300 hover:text-warm-900 dark:hover:text-warm-100 transition-colors duration-300 font-medium py-2"
+                    className="flex items-center space-x-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 font-medium py-2"
                   >
                     <item.icon size={20} />
                     <span>{item.label}</span>

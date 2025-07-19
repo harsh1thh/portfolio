@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
+import { PARTICLE_CONFIG, SOCIAL_LINKS, BREAKPOINTS } from '@/lib/constants'
 
 const Hero = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -27,15 +28,16 @@ const Hero = () => {
       opacity: number
     }> = []
 
-    // Create particles
-    for (let i = 0; i < 50; i++) {
+    // Create particles (fewer on mobile for performance)
+    const particleCount = window.innerWidth < BREAKPOINTS.MOBILE ? PARTICLE_CONFIG.COUNT_MOBILE : PARTICLE_CONFIG.COUNT_DESKTOP
+    for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.3 + 0.1
+        vx: (Math.random() - 0.5) * PARTICLE_CONFIG.SPEED,
+        vy: (Math.random() - 0.5) * PARTICLE_CONFIG.SPEED,
+        size: Math.random() * (PARTICLE_CONFIG.SIZE_MAX - PARTICLE_CONFIG.SIZE_MIN) + PARTICLE_CONFIG.SIZE_MIN,
+        opacity: Math.random() * (PARTICLE_CONFIG.OPACITY_MAX - PARTICLE_CONFIG.OPACITY_MIN) + PARTICLE_CONFIG.OPACITY_MIN
       })
     }
 
@@ -51,7 +53,7 @@ const Hero = () => {
 
         ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(120, 113, 108, ${particle.opacity})`
+        ctx.fillStyle = `rgba(156, 163, 175, ${particle.opacity})`
         ctx.fill()
       })
 
@@ -128,7 +130,7 @@ const Hero = () => {
 
           <div className="flex justify-center space-x-6">
             <motion.a
-              href="https://github.com/harsh1thX"
+              href={SOCIAL_LINKS.GITHUB}
               target="_blank"
               whileHover={{ scale: 1.2, rotate: 5 }}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300"
@@ -136,7 +138,7 @@ const Hero = () => {
               <Github size={28} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/harshith-bheempalli"
+              href={SOCIAL_LINKS.LINKEDIN}
               target="_blank"
               whileHover={{ scale: 1.2, rotate: -5 }}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300"

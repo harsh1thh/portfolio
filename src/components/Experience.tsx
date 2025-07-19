@@ -67,7 +67,7 @@ const Experience = () => {
             <h2 className="text-4xl md:text-5xl font-display text-gradient mb-6">
               Experience & Journey
             </h2>
-            <p className="text-xl text-warm-700 dark:text-warm-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Building expertise through hands-on projects, open source contributions, and continuous learning
             </p>
           </motion.div>
@@ -81,13 +81,13 @@ const Experience = () => {
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-warm-900 dark:text-warm-200 mb-2">
+                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-200 mb-2">
                       {exp.title}
                     </h3>
-                    <h4 className="text-lg text-warm-700 dark:text-warm-400 font-medium mb-2">
+                    <h4 className="text-lg text-gray-700 dark:text-gray-400 font-medium mb-2">
                       {exp.company}
                     </h4>
-                    <div className="flex flex-wrap items-center gap-4 text-warm-600 dark:text-warm-500 text-sm mb-4">
+                    <div className="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-500 text-sm mb-4">
                       <div className="flex items-center space-x-1">
                         <Calendar size={16} />
                         <span>{exp.period}</span>
@@ -96,7 +96,7 @@ const Experience = () => {
                         <MapPin size={16} />
                         <span>{exp.location}</span>
                       </div>
-                      <span className="bg-warm-300 dark:bg-warm-700 text-warm-800 dark:text-warm-300 px-2 py-1 rounded-md text-xs font-medium">
+                      <span className="bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-300 px-2 py-1 rounded-md text-xs font-medium">
                         {exp.type}
                       </span>
                     </div>
@@ -107,7 +107,7 @@ const Experience = () => {
                       href={exp.link}
                       target={exp.link.startsWith('http') ? '_blank' : '_self'}
                       whileHover={{ scale: 1.05 }}
-                      className="flex items-center space-x-1 text-warm-700 dark:text-warm-400 hover:text-warm-900 dark:hover:text-warm-200 transition-colors mt-4 md:mt-0"
+                      className="flex items-center space-x-1 text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors mt-4 md:mt-0"
                     >
                       <ExternalLink size={16} />
                       <span className="text-sm font-medium">View More</span>
@@ -115,10 +115,10 @@ const Experience = () => {
                   )}
                 </div>
 
-                <ul className="space-y-3 mb-6 text-warm-700 dark:text-warm-400">
+                <ul className="space-y-3 mb-6 text-gray-700 dark:text-gray-400">
                   {exp.description.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-warm-500 dark:bg-warm-500 rounded-full mt-2 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-gray-500 dark:bg-gray-500 rounded-full mt-2 flex-shrink-0" />
                       <span className="leading-relaxed">{item}</span>
                     </li>
                   ))}
@@ -128,7 +128,7 @@ const Experience = () => {
                   {exp.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="bg-warm-300 dark:bg-warm-700 text-warm-800 dark:text-warm-300 px-3 py-1 rounded-full text-sm font-medium"
+                      className="bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-300 px-3 py-1 rounded-full text-sm font-medium"
                     >
                       {tech}
                     </span>
@@ -142,10 +142,10 @@ const Experience = () => {
 
           <motion.div variants={fadeInUp} className="text-center mt-16">
             <div className="glass-effect p-8 rounded-2xl">
-              <h3 className="text-2xl font-display text-warm-900 dark:text-warm-200 mb-4">
+              <h3 className="text-2xl font-display text-gray-900 dark:text-gray-200 mb-4">
                 Ready for New Opportunities
               </h3>
-              <p className="text-warm-700 dark:text-warm-400 mb-6 leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-400 mb-6 leading-relaxed">
                 As a passionate fresher, I'm eager to bring my diverse skill set and enthusiasm 
                 for learning to a dynamic team. I'm looking for opportunities where I can contribute 
                 to meaningful projects while continuing to grow professionally.
@@ -154,7 +154,7 @@ const Experience = () => {
                 href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center space-x-2 bg-warm-800 dark:bg-warm-600 text-white px-8 py-3 rounded-full font-medium hover:bg-warm-900 dark:hover:bg-warm-700 transition-colors duration-300"
+                className="inline-flex items-center space-x-2 bg-gray-800 dark:bg-gray-600 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-900 dark:hover:bg-gray-700 transition-colors duration-300"
               >
                 <span>Let's Connect</span>
               </motion.a>

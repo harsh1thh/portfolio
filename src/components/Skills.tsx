@@ -72,10 +72,10 @@ const Skills = () => {
         className="mb-6"
       >
         <div className="flex justify-between items-center mb-2">
-          <span className="text-warm-700 dark:text-warm-300 font-medium">{skill.name}</span>
-          <span className="text-warm-500 dark:text-warm-500 text-sm">{skill.level}%</span>
+          <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
+          <span className="text-gray-500 dark:text-gray-500 text-sm">{skill.level}%</span>
         </div>
-        <div className="w-full bg-warm-200 dark:bg-warm-700 rounded-full h-2 overflow-hidden">
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
           <div
             ref={barRef}
             className="h-full bg-gradient-to-r from-warm-600 to-warm-700 dark:from-warm-400 dark:to-warm-500 rounded-full transition-all duration-1000 ease-out"
@@ -100,7 +100,7 @@ const Skills = () => {
             <h2 className="text-4xl md:text-5xl font-display text-gradient mb-6">
               Skills & Expertise
             </h2>
-            <p className="text-xl text-warm-600 dark:text-warm-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               A comprehensive skill set spanning traditional programming to cutting-edge technologies
             </p>
           </motion.div>
@@ -112,7 +112,7 @@ const Skills = () => {
                 variants={fadeInUp}
                 className="glass-effect p-8 rounded-2xl hover-lift"
               >
-                <h3 className="text-xl font-semibold text-warm-800 dark:text-warm-200 mb-6 text-center">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6 text-center">
                   {category.category}
                 </h3>
                 <div className="space-y-4">
@@ -133,24 +133,24 @@ const Skills = () => {
             className="mt-16 text-center"
           >
             <div className="glass-effect p-8 rounded-2xl max-w-4xl mx-auto">
-              <h3 className="text-2xl font-semibold text-warm-800 dark:text-warm-200 mb-4">
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
                 Additional Proficiencies
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-warm-600 dark:text-warm-400">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-gray-600 dark:text-gray-400">
                 <div>
-                  <h4 className="font-medium text-warm-700 dark:text-warm-300 mb-2">Operating Systems</h4>
+                  <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Operating Systems</h4>
                   <p className="text-sm">Linux, Windows, macOS</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-warm-700 dark:text-warm-300 mb-2">Virtualization</h4>
+                  <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Virtualization</h4>
                   <p className="text-sm">VMware, VirtualBox</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-warm-700 dark:text-warm-300 mb-2">Networking</h4>
+                  <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Networking</h4>
                   <p className="text-sm">TCP/IP, Protocols, Security</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-warm-700 dark:text-warm-300 mb-2">Shell Scripting</h4>
+                  <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Shell Scripting</h4>
                   <p className="text-sm">Bash, PowerShell, Automation</p>
                 </div>
               </div>

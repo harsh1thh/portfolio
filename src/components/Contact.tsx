@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, CheckCircle } from 'lucide-react'
 import { fadeInUp, staggerContainer, slideInLeft, slideInRight } from '@/lib/animations'
 
 const Contact = () => {
@@ -14,6 +14,7 @@ const Contact = () => {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -29,8 +30,11 @@ const Contact = () => {
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false)
+      setIsSubmitted(true)
       setFormData({ name: '', email: '', subject: '', message: '' })
-      alert('Thank you for your message! I\'ll get back to you soon.')
+      
+      // Reset success message after 3 seconds
+      setTimeout(() => setIsSubmitted(false), 3000)
     }, 1000)
   }
 
@@ -75,7 +79,7 @@ const Contact = () => {
       label: "Portfolio",
       value: "View Live Site",
       link: "#home",
-      color: "hover:text-warm-700"
+      color: "hover:text-gray-700"
     }
   ]
 
@@ -93,7 +97,7 @@ const Contact = () => {
             <h2 className="text-4xl md:text-5xl font-display text-gradient mb-6">
               Let's Connect
             </h2>
-            <p className="text-xl text-warm-600 dark:text-warm-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Ready to start a conversation about opportunities, collaborations, or just to say hello
             </p>
           </motion.div>
@@ -102,10 +106,10 @@ const Contact = () => {
             {/* Contact Information */}
             <motion.div variants={slideInLeft} className="space-y-8">
               <div>
-                <h3 className="text-2xl font-semibold text-warm-800 dark:text-warm-200 mb-6">
+                <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
                   Get In Touch
                 </h3>
-                <p className="text-warm-600 dark:text-warm-400 leading-relaxed mb-8">
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
                   I'm always excited to discuss new opportunities, whether it's a challenging project, 
                   a learning opportunity, or potential collaboration. As a passionate developer eager 
                   to make an impact, I'd love to hear from you.
@@ -119,28 +123,28 @@ const Contact = () => {
                     variants={fadeInUp}
                     className="flex items-center space-x-4"
                   >
-                    <div className="p-3 bg-warm-800 dark:bg-warm-600 text-white rounded-xl">
+                    <div className="p-3 bg-gray-800 dark:bg-gray-600 text-white rounded-xl">
                       <info.icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className="text-warm-500 dark:text-warm-400 text-sm font-medium">{info.label}</p>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm font-medium">{info.label}</p>
                       {info.link ? (
                         <a
                           href={info.link}
-                          className="text-warm-700 dark:text-warm-300 hover:text-warm-900 dark:hover:text-warm-100 transition-colors"
+                          className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-warm-700 dark:text-warm-300">{info.value}</p>
+                        <p className="text-gray-700 dark:text-gray-300">{info.value}</p>
                       )}
                     </div>
                   </motion.div>
                 ))}
               </div>
 
-              <div className="border-t border-warm-400 dark:border-warm-600 pt-8">
-                <h4 className="text-lg font-semibold text-warm-800 dark:text-warm-200 mb-6">
+              <div className="border-t border-gray-400 dark:border-gray-600 pt-8">
+                <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-6">
                   Follow Me
                 </h4>
                 <div className="flex space-x-4">
@@ -151,7 +155,7 @@ const Contact = () => {
                       target={social.link?.startsWith('http') ? '_blank' : '_self'}
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.9 }}
-                      className={`p-3 bg-white dark:bg-warm-700 text-warm-600 dark:text-warm-300 rounded-xl hover:shadow-lg transition-all duration-300 ${social.color}`}
+                      className={`p-3 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-xl hover:shadow-lg transition-all duration-300 ${social.color}`}
                     >
                       <social.icon className="w-5 h-5" />
                     </motion.a>
@@ -163,14 +167,14 @@ const Contact = () => {
             {/* Contact Form */}
             <motion.div variants={slideInRight}>
               <div className="glass-effect p-8 rounded-2xl">
-                <h3 className="text-2xl font-semibold text-warm-800 dark:text-warm-200 mb-6">
+                <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
                   Send a Message
                 </h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-warm-700 dark:text-warm-300 font-medium mb-2">
+                      <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
                         Name
                       </label>
                       <input
@@ -180,12 +184,12 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-warm-300 dark:border-warm-600 focus:border-warm-500 focus:outline-none transition-colors bg-white/80 dark:bg-warm-800/80 dark:text-white"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-gray-500 focus:outline-none transition-colors bg-white/80 dark:bg-gray-800/80 dark:text-white"
                         placeholder="Your name"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-warm-700 dark:text-warm-300 font-medium mb-2">
+                      <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
                         Email
                       </label>
                       <input
@@ -195,14 +199,14 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-warm-300 dark:border-warm-600 focus:border-warm-500 focus:outline-none transition-colors bg-white/80 dark:bg-warm-800/80 dark:text-white"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-gray-500 focus:outline-none transition-colors bg-white/80 dark:bg-gray-800/80 dark:text-white"
                         placeholder="your.email@example.com"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-warm-700 dark:text-warm-300 font-medium mb-2">
+                    <label htmlFor="subject" className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
                       Subject
                     </label>
                     <input
@@ -212,13 +216,13 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-warm-300 dark:border-warm-600 focus:border-warm-500 focus:outline-none transition-colors bg-white/80 dark:bg-warm-800/80 dark:text-white"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-gray-500 focus:outline-none transition-colors bg-white/80 dark:bg-gray-800/80 dark:text-white"
                       placeholder="What's this about?"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-warm-700 dark:text-warm-300 font-medium mb-2">
+                    <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
                       Message
                     </label>
                     <textarea
@@ -228,7 +232,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 rounded-xl border border-warm-300 dark:border-warm-600 focus:border-warm-500 focus:outline-none transition-colors bg-white/80 dark:bg-warm-800/80 resize-none dark:text-white"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-gray-500 focus:outline-none transition-colors bg-white/80 dark:bg-gray-800/80 resize-none dark:text-white"
                       placeholder="Tell me about your project or just say hello!"
                     />
                   </div>
@@ -238,7 +242,7 @@ const Contact = () => {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-warm-800 dark:bg-warm-600 text-white py-3 px-6 rounded-xl font-medium hover:bg-warm-900 dark:hover:bg-warm-700 transition-colors duration-300 flex items-center justify-center space-x-2 disabled:opacity-50"
+                    className="w-full bg-gray-800 dark:bg-gray-600 text-white py-3 px-6 rounded-xl font-medium hover:bg-gray-900 dark:hover:bg-gray-700 transition-colors duration-300 flex items-center justify-center space-x-2 disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -249,6 +253,20 @@ const Contact = () => {
                       </>
                     )}
                   </motion.button>
+
+                  {/* Success Message */}
+                  {isSubmitted && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-xl flex items-center space-x-3"
+                    >
+                      <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
+                      <span className="text-green-700 dark:text-green-300 font-medium">
+                        Thank you for your message! I'll get back to you soon.
+                      </span>
+                    </motion.div>
+                  )}
                 </form>
               </div>
             </motion.div>
@@ -261,14 +279,14 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="border-t border-warm-400 dark:border-warm-600 mt-20 pt-8"
+        className="border-t border-gray-400 dark:border-gray-600 mt-20 pt-8"
       >
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <p className="text-warm-600 dark:text-warm-400">
+            <p className="text-gray-600 dark:text-gray-400">
               © 2024 Harshith Bheempalli. Built with passion using Next.js, TypeScript, and Tailwind CSS.
             </p>
-            <p className="text-warm-500 dark:text-warm-500 text-sm mt-2">
+            <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">
               Designed for performance, accessibility, and an exceptional user experience.
             </p>
           </div>

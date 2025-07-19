@@ -88,7 +88,7 @@ const Projects = () => {
             <h2 className="text-4xl md:text-5xl font-display text-gradient mb-6">
               Featured Projects
             </h2>
-            <p className="text-xl text-warm-600 dark:text-warm-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Showcasing innovative solutions across multiple technology domains
             </p>
           </motion.div>
@@ -103,19 +103,19 @@ const Projects = () => {
               >
                 <div className="relative h-48 bg-gradient-to-br from-warm-200 to-warm-300 dark:from-warm-700 dark:to-warm-800 flex items-center justify-center">
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20`} />
-                  <project.icon className="w-16 h-16 text-warm-600 dark:text-warm-400 z-10" />
+                  <project.icon className="w-16 h-16 text-gray-600 dark:text-gray-400 z-10" />
                   <div className="absolute top-4 right-4">
-                    <span className="bg-white/90 dark:bg-warm-900/90 text-warm-700 dark:text-warm-300 px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-white/90 dark:bg-gray-900/90 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
                       {project.category}
                     </span>
                   </div>
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-warm-800 dark:text-warm-200 mb-3 group-hover:text-warm-900 dark:group-hover:text-warm-100 transition-colors">
+                  <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-3 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-warm-600 dark:text-warm-400 mb-4 leading-relaxed text-sm">
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm">
                     {project.description}
                   </p>
 
@@ -123,7 +123,7 @@ const Projects = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="bg-warm-200 dark:bg-warm-700 text-warm-700 dark:text-warm-300 px-2 py-1 rounded-md text-xs font-medium"
+                        className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md text-xs font-medium"
                       >
                         {tech}
                       </span>
@@ -137,7 +137,7 @@ const Projects = () => {
                         target="_blank"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className="p-2 bg-warm-800 dark:bg-warm-200 text-white dark:text-warm-800 rounded-lg hover:bg-warm-900 dark:hover:bg-warm-100 transition-colors"
+                        className="p-2 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 rounded-lg hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors"
                       >
                         <Github size={16} />
                       </motion.a>
@@ -146,7 +146,7 @@ const Projects = () => {
                         target="_blank"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className="p-2 bg-warm-600 dark:bg-warm-400 text-white dark:text-warm-800 rounded-lg hover:bg-warm-700 dark:hover:bg-warm-300 transition-colors"
+                        className="p-2 bg-gray-600 dark:bg-gray-400 text-white dark:text-gray-800 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-300 transition-colors"
                       >
                         <ExternalLink size={16} />
                       </motion.a>
@@ -163,7 +163,7 @@ const Projects = () => {
               target="_blank"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 bg-warm-800 dark:bg-warm-200 text-white dark:text-warm-800 px-8 py-3 rounded-full font-medium hover:bg-warm-900 dark:hover:bg-warm-100 transition-colors duration-300"
+              className="inline-flex items-center space-x-2 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 px-8 py-3 rounded-full font-medium hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors duration-300"
             >
               <Github size={18} />
               <span>View All Projects</span>
